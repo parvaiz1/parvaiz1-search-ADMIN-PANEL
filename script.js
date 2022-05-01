@@ -8,7 +8,9 @@ var userData = []
 
 function userRowClicked(id){
    var previousActiveUser =  document.getElementsByClassName("active")[0];
+   if(previousActiveUser != undefined){
    previousActiveUser.classList.remove("active")
+}
     var activeHighlightedUser = document.getElementById("tr"+id)
     activeHighlightedUser.classList.add("active")
    var activeHighlightedUserDetails = userData.find( (user,i) => {
